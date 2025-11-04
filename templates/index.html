@@ -2,42 +2,15 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Banane</title>
-    <style>
-        body {
-            background-color: #111;
-            color: #fff;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 10%;
-        }
-        h1 {
-            font-size: 48px;
-            color: #ffcc00;
-        }
-        p {
-            font-size: 20px;
-            color: #ccc;
-        }
-        .btn {
-            margin-top: 30px;
-            padding: 10px 20px;
-            background-color: #ffcc00;
-            border: none;
-            border-radius: 8px;
-            color: #111;
-            font-weight: bold;
-            cursor: pointer;
-        }
-        .btn:hover {
-            background-color: #ffaa00;
-        }
-    </style>
+    <title>{{ title }}</title>
 </head>
-<body>
-    <h1>Banane!</h1>
-    <p>Render üzerinde Flask uygulaman başarıyla çalışıyor 🎉</p>
-    <button class="btn" onclick="alert('Tebrikler, sistem çalışıyor!')">Tıkla</button>
+<body style="font-family: Arial; text-align: center; margin-top: 50px;">
+    <h1>🤖 {{ title }}</h1>
+    <p>{{ message }}</p>
+
+    <form action="/tani" method="post" style="margin-top: 20px;">
+        <input type="text" name="ariza" placeholder="Arızayı buraya yaz..." style="padding:10px; width: 300px;">
+        <button type="submit" style="padding:10px 20px;">Analiz Et</button>
+    </form>
 </body>
 </html>
